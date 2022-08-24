@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Layout from "../components/Layout";
 import Landing from "../components/Landing";
-import Home from "./Home";
+import Content from "./Content";
 
 const Router = () => {
   return (
@@ -13,7 +13,7 @@ const Router = () => {
         path="/home"
         element={
           <Layout>
-            <Home />
+            <Content />
           </Layout>
         }
       />

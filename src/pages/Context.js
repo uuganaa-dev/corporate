@@ -6,7 +6,7 @@ const Context = React.createContext();
 const initialState = {
   header: false,
   menu: [
-    { id: 1, url: "", name: "HOME" },
+    { id: 1, url: "home", name: "HOME" },
     { id: 2, url: "about", name: "ABOUT" },
     { id: 3, url: "rooms", name: "ROOMS" },
     { id: 4, url: "service", name: "SERVICE" },
