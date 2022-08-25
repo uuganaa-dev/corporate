@@ -5,6 +5,8 @@ import Home from "./Home";
 import Rooms from "./Rooms";
 import Service from "./Service";
 import About from "./About";
+import Restaurant from "./Restaurant";
+import Contact from "./Contact";
 
 const Content = () => {
   return (
@@ -20,6 +22,12 @@ const Content = () => {
       </Element>
       <Element name="about" className="element">
         <About />
+      </Element>
+      <Element name="restaurant" className="element">
+        <Restaurant />
+      </Element>
+      <Element name="contact" className="element">
+        <Contact />
       </Element>
     </div>
   );
