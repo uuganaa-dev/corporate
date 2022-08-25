@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 
 const Service = () => {
-  const [show1, setShow1] = useState(false);
-  const [show2, setShow2] = useState(false);
-  const [show3, setShow3] = useState(false);
-  const [show4, setShow4] = useState(false);
+  const [show, setShow] = useState(false);
+  const [type, setType] = useState(1);
   return (
     <>
       <div
-        className="h-screen"
+        className="h-[70vh]"
         style={{
-          background: "url(/img/bg.png)",
+          background: "url(/img/bg2.png)",
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -22,16 +20,16 @@ const Service = () => {
               </div>
               <div>With the best luxury spa, salon and wedding experiences</div>
             </div>
-            <div className="px-4 py-2 border">VIEW ALL</div>
+            <div className="px-4 py-2 border bg-[#EEEEEE] text-[#00000099]">
+              VIEW ALL
+            </div>
           </div>
           <div className="flex">
             <div
               className="relative bg-[#0D2944] z-[1]"
-              onMouseEnter={() => {
-                setShow1(true);
-              }}
-              onMouseLeave={() => {
-                setShow1(false);
+              onClick={() => {
+                setShow(true);
+                setType(1);
               }}
             >
               <img
@@ -50,11 +48,9 @@ const Service = () => {
             </div>
             <div
               className="relative bg-[#0D2944] z-[1]"
-              onMouseEnter={() => {
-                setShow2(true);
-              }}
-              onMouseLeave={() => {
-                setShow2(false);
+              onClick={() => {
+                setShow(true);
+                setType(2);
               }}
             >
               <img
@@ -73,11 +69,9 @@ const Service = () => {
             </div>
             <div
               className="relative bg-[#0D2944] z-[1]"
-              onMouseEnter={() => {
-                setShow3(true);
-              }}
-              onMouseLeave={() => {
-                setShow3(false);
+              onClick={() => {
+                setShow(true);
+                setType(3);
               }}
             >
               <img
@@ -96,11 +90,9 @@ const Service = () => {
             </div>
             <div
               className="relative bg-[#0D2944] z-[1]"
-              onMouseEnter={() => {
-                setShow4(true);
-              }}
-              onMouseLeave={() => {
-                setShow4(false);
+              onClick={() => {
+                setShow(true);
+                setType(4);
               }}
             >
               <img
@@ -120,106 +112,118 @@ const Service = () => {
           </div>
         </div>
       </div>
-      <div className={show1 ? "block" : "hidden"}>
+      <div className={show ? "block" : "hidden"}>
         <div
-          className="fixed top-1/2 left-1/2 z-[2]"
+          className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 w-full h-modal h-full bg-black opacity-30 z-50"
+          onClick={() => setShow(false)}
+        ></div>
+        <div
+          className="fixed top-1/2 left-1/2 z-[60]"
           style={{ transform: "translate(-50%, -50%)" }}
         >
-          <div className="relative shadow">
-            <div className="w-[720px] h-[500px] relative">
-              <img
-                src="/img/service/111.png"
-                alt=""
-                className="w-full h-full object-cover"
-              />
-              <div className="h-[155px] w-full absolute bottom-0 bg-[#0D294499] p-8 text-white">
-                <div className="text-[30px] text-[#FFE3AB]">
-                  BAR & RESTAURANTS
-                </div>
-                <div>
-                  The Resturant is the Colina Resort's iconic dining venue,
-                  serving breakfast, afternoon tea and an evening service
-                  complimented by the recent addition of a bar and craft
-                  cocktail program.
+          {type === 1 && (
+            <div className="relative shadow">
+              <div className="w-[720px] h-[500px] relative">
+                <img
+                  src="/img/service/111.png"
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+                <div className="h-[155px] w-full absolute bottom-0 bg-[#0D294499] p-8 text-white">
+                  <div className="text-[30px] text-[#FFE3AB]">
+                    BAR & RESTAURANTS
+                  </div>
+                  <div>
+                    The Resturant is the Colina Resort's iconic dining venue,
+                    serving breakfast, afternoon tea and an evening service
+                    complimented by the recent addition of a bar and craft
+                    cocktail program.
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className={show2 ? "block" : "hidden"}>
-        <div
-          className="fixed top-1/2 left-1/2 z-[2]"
-          style={{ transform: "translate(-50%, -50%)" }}
-        >
-          <div className="relative shadow">
-            <div className="w-[720px] h-[500px] relative">
-              <img
-                src="/img/service/222.png"
-                alt=""
-                className="w-full h-full object-cover"
-              />
-              <div className="h-[155px] w-full absolute bottom-0 bg-[#0D294499] p-8 text-white">
-                <div className="text-[30px] text-[#FFE3AB]">SPA & SALON</div>
-                <div>
-                  The Resturant is the Colina Resort's iconic dining venue,
-                  serving breakfast, afternoon tea and an evening service
-                  complimented by the recent addition of a bar and craft
-                  cocktail program.
+          )}
+          {type === 2 && (
+            <div
+              className="fixed top-1/2 left-1/2 z-[2]"
+              style={{ transform: "translate(-50%, -50%)" }}
+            >
+              <div className="relative shadow">
+                <div className="w-[720px] h-[500px] relative">
+                  <img
+                    src="/img/service/222.png"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="h-[155px] w-full absolute bottom-0 bg-[#0D294499] p-8 text-white">
+                    <div className="text-[30px] text-[#FFE3AB]">
+                      SPA & SALON
+                    </div>
+                    <div>
+                      The Resturant is the Colina Resort's iconic dining venue,
+                      serving breakfast, afternoon tea and an evening service
+                      complimented by the recent addition of a bar and craft
+                      cocktail program.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className={show3 ? "block" : "hidden"}>
-        <div
-          className="fixed top-1/2 left-1/2 z-[2]"
-          style={{ transform: "translate(-50%, -50%)" }}
-        >
-          <div className="relative shadow">
-            <div className="w-[720px] h-[500px] relative">
-              <img
-                src="/img/service/333.png"
-                alt=""
-                className="w-full h-full object-cover"
-              />
-              <div className="h-[155px] w-full absolute bottom-0 bg-[#0D294499] p-8 text-white">
-                <div className="text-[30px] text-[#FFE3AB]">SWIMMING POOL</div>
-                <div>
-                  The Resturant is the Colina Resort's iconic dining venue,
-                  serving breakfast, afternoon tea and an evening service
-                  complimented by the recent addition of a bar and craft
-                  cocktail program.
+          )}
+          {type === 3 && (
+            <div
+              className="fixed top-1/2 left-1/2 z-[2]"
+              style={{ transform: "translate(-50%, -50%)" }}
+            >
+              <div className="relative shadow">
+                <div className="w-[720px] h-[500px] relative">
+                  <img
+                    src="/img/service/333.png"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="h-[155px] w-full absolute bottom-0 bg-[#0D294499] p-8 text-white">
+                    <div className="text-[30px] text-[#FFE3AB]">
+                      SWIMMING POOL
+                    </div>
+                    <div>
+                      The Resturant is the Colina Resort's iconic dining venue,
+                      serving breakfast, afternoon tea and an evening service
+                      complimented by the recent addition of a bar and craft
+                      cocktail program.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className={show4 ? "block" : "hidden"}>
-        <div
-          className="fixed top-1/2 left-1/2 z-[2]"
-          style={{ transform: "translate(-50%, -50%)" }}
-        >
-          <div className="relative shadow">
-            <div className="w-[720px] h-[500px] relative">
-              <img
-                src="/img/service/444.png"
-                alt=""
-                className="w-full h-full object-cover"
-              />
-              <div className="h-[155px] w-full absolute bottom-0 bg-[#0D294499] p-8 text-white">
-                <div className="text-[30px] text-[#FFE3AB]">WEDDING EVENT</div>
-                <div>
-                  The Resturant is the Colina Resort's iconic dining venue,
-                  serving breakfast, afternoon tea and an evening service
-                  complimented by the recent addition of a bar and craft
-                  cocktail program.
+          )}
+          {type === 4 && (
+            <div
+              className="fixed top-1/2 left-1/2 z-[2]"
+              style={{ transform: "translate(-50%, -50%)" }}
+            >
+              <div className="relative shadow">
+                <div className="w-[720px] h-[500px] relative">
+                  <img
+                    src="/img/service/444.png"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="h-[155px] w-full absolute bottom-0 bg-[#0D294499] p-8 text-white">
+                    <div className="text-[30px] text-[#FFE3AB]">
+                      WEDDING EVENT
+                    </div>
+                    <div>
+                      The Resturant is the Colina Resort's iconic dining venue,
+                      serving breakfast, afternoon tea and an evening service
+                      complimented by the recent addition of a bar and craft
+                      cocktail program.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </>

@@ -7,9 +7,9 @@ const initialState = {
   header: false,
   menu: [
     { id: 1, url: "home", name: "HOME" },
-    { id: 2, url: "about", name: "ABOUT" },
-    { id: 3, url: "rooms", name: "ROOMS" },
-    { id: 4, url: "service", name: "SERVICE" },
+    { id: 2, url: "rooms", name: "ROOMS" },
+    { id: 3, url: "service", name: "SERVICE" },
+    { id: 4, url: "about", name: "ABOUT" },
     { id: 5, url: "restaurant", name: "RESTAURANT & BAR" },
     { id: 6, url: "contact", name: "CONTACT" },
   ],

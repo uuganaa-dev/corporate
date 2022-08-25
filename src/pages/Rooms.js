@@ -3,8 +3,8 @@ import React from "react";
 const Rooms = () => {
   return (
     <div
-      className="h-screen relative"
-      style={{ background: "url(/img/bg.png)", backgroundRepeat: "no-repeat" }}
+      className="h-[70vh] relative"
+      style={{ background: "url(/img/bg1.png)", backgroundRepeat: "no-repeat" }}
     >
       <div className="h-[50%] w-full"></div>
       <div
@@ -13,6 +13,7 @@ const Rooms = () => {
           background: "linear-gradient(180deg, #0F304F 0%, #2B2927 100%)",
         }}
       ></div>
+
       <div
         className="absolute top-[55%] left-[10%]"
         style={{ transform: "translate(-50%, -50%)" }}
@@ -47,11 +48,24 @@ const Rooms = () => {
           />
         </svg>
       </div>
-
       <div
         className="absolute top-1/2 left-1/2 max-w-[1450px] mx-auto"
         style={{ transform: "translate(-50%, -50%)" }}
       >
+        <div className="flex items-center justify-between pb-10 font-[Constantia]">
+          <div>
+            <div className="text-[30px]">
+              <span className="text-[#B58E3E]">ROOMS</span> & ACCOMMODATION
+            </div>
+            <div>
+              Designed as a privileged almost private place where you'll feel
+              right at home
+            </div>
+          </div>
+          <div className="px-4 py-2 border bg-[#EEEEEE] text-[#00000099]">
+            VIEW ALL
+          </div>
+        </div>
         <div className="flex">
           <div className="w-[450px] h-[450px]">
             <img
