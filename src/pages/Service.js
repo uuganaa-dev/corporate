@@ -1,8 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
+const data = [
+  {
+    title: 'BAR & RESTAURANTS',
+    image: '/img/service/111.png'
+  },
+  {
+    title: 'SPA & SALON',
+    image: '/img/service/222.png'
+  },
+  {
+    title: 'SWIMMING POOL',
+    image: '/img/service/333.png'
+  },
+  {
+    title: 'WEDDING EVENT',
+    image: '/img/service/444.png'
+  },
+
+]
 const Service = () => {
-  const [show, setShow] = useState(false);
-  const [type, setType] = useState(1);
+
   return (
     <>
       <div
@@ -25,94 +44,31 @@ const Service = () => {
             </div>
           </div>
           <div className="flex">
-            <div
-              className="relative bg-[#0D2944] z-[1]"
-              onClick={() => {
-                setShow(true);
-                setType(1);
-              }}
-            >
-              <img
-                src="/img/service/service1.png"
-                alt=""
-                className="w-[400px] h-[500px] object-cover opacity-50"
-              />
-              <div
-                className="absolute top-1/2 left-1/2 text-[30px] text-[#FFE3AB] w-full text-center px-8"
-                style={{
-                  transform: "translate(-50%, -50%)",
-                }}
+            {data.map((facility, index) => (
+              <Link
+                to={`/facility/${index}`}
+                className="relative bg-[#0D2944] z-[1]"
               >
-                BAR & RESTAURANTS
-              </div>
-            </div>
-            <div
-              className="relative bg-[#0D2944] z-[1]"
-              onClick={() => {
-                setShow(true);
-                setType(2);
-              }}
-            >
-              <img
-                src="/img/service/service2.png"
-                alt=""
-                className="w-[400px] h-[500px] object-cover opacity-50"
-              />
-              <div
-                className="absolute top-1/2 left-1/2 text-[30px] text-[#FFE3AB] w-full text-center px-8"
-                style={{
-                  transform: "translate(-50%, -50%)",
-                }}
-              >
-                SPA & SALON
-              </div>
-            </div>
-            <div
-              className="relative bg-[#0D2944] z-[1]"
-              onClick={() => {
-                setShow(true);
-                setType(3);
-              }}
-            >
-              <img
-                src="/img/service/service3.png"
-                alt=""
-                className="w-[400px] h-[500px] object-cover opacity-50"
-              />
-              <div
-                className="absolute top-1/2 left-1/2 text-[30px] text-[#FFE3AB] w-full text-center px-8"
-                style={{
-                  transform: "translate(-50%, -50%)",
-                }}
-              >
-                HEALTH CLUB & SWIMMING POOL
-              </div>
-            </div>
-            <div
-              className="relative bg-[#0D2944] z-[1]"
-              onClick={() => {
-                setShow(true);
-                setType(4);
-              }}
-            >
-              <img
-                src="/img/service/service4.png"
-                alt=""
-                className="w-[400px] h-[500px] object-cover opacity-50"
-              />
-              <div
-                className="absolute top-1/2 left-1/2 text-[30px] text-[#FFE3AB] w-full text-center px-8"
-                style={{
-                  transform: "translate(-50%, -50%)",
-                }}
-              >
-                CONCERT & EVENT HALL
-              </div>
-            </div>
+                <img
+                  src={facility.image}
+                  alt=""
+                  className="w-[400px] h-[500px] object-cover opacity-50"
+                />
+                <div
+                  className="absolute top-1/2 left-1/2 text-[30px] text-[#FFE3AB] w-full text-center px-8"
+                  style={{
+                    transform: "translate(-50%, -50%)",
+                  }}
+                >
+                  {facility.title}
+                </div>
+              </Link>
+            ))}
+
           </div>
         </div>
       </div>
-      <div className={show ? "block" : "hidden"}>
+      {/* <div className={show ? "block" : "hidden"}>
         <div
           className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 w-full h-modal h-full bg-black opacity-30 z-50"
           onClick={() => setShow(false)}
@@ -225,7 +181,7 @@ const Service = () => {
             </div>
           )}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
