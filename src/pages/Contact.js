@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 
 const Contact = () => {
   return (
     <div>
-      <div className="h-[450px] w-full bg-white">
+      {/* <div className="h-[450px] w-full bg-white">
         <div className="w-[1000px] h-full mx-auto flex items-center justify-center">
           <div className="flex-1 mr-8">
             <div className="text-blue-500">Арга хэмжээ</div>
@@ -61,6 +62,18 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="mb-5 w-full flex items-center justify-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2674.20441435739!2d106.91183561564117!3d47.91308207920616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96924ed64cb5c9%3A0x6afa52f9842e1ff8!2sThe%20Corporate%20Hotel!5e0!3m2!1sen!2smn!4v1677503214468!5m2!1sen!2smn"
+          width="980"
+          height="450"
+          frameBorder="0"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          aria-hidden="false"
+          tabIndex="0"
+        />
       </div>
       <div className="h-[500px] w-full bg-[#E5E5E5] flex flex-col items-center justify-center">
         <img src="/img/footer_logo.png" alt="footer logo" />

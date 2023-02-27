@@ -16,7 +16,7 @@ const Home = () => {
           className="absolute top-[40%] left-1/2"
           style={{ transform: "translate(-50%, -60%)" }}
         />
-        <div
+        {/* <div
           className="absolute top-[80%] left-1/2 font-[Constantia] text-gray-100"
           style={{ transform: "translate(-50%, -60%)" }}
         >
@@ -72,8 +72,8 @@ const Home = () => {
             <div className="text-[25px]">Book now</div>
             <div className="text-xs">Best Prices Guaranteed</div>
           </div>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className="absolute top-[50%] right-[5%] text-gray-100 text-2xl font-[roboto]"
           style={{ transform: "translate(-50%, -50%)" }}
         >
@@ -86,7 +86,7 @@ const Home = () => {
           <div className={`my-4 ${home_bg === 3 && "font-extrabold text-3xl"}`}>
             3
           </div>
-        </div>
+        </div> */}
         <div
           className="absolute top-1/2 left-[10%]"
           style={{ transform: "translate(-50%, -50%)" }}

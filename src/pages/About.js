@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div
-      className="h-[70vh]"
+      className="h-[70vh] mb-5"
       style={{
         background: "url(/img/bg3.png)",
         backgroundRepeat: "no-repeat",
@@ -12,7 +12,7 @@ const About = () => {
       <div className="max-w-[1450px] mx-auto">
         <div className="flex items-center justify-between pt-28 font-[Constantia]">
           <div>
-            <div className="text-[30px]">
+            <div className="text-[30px] mt-5">
               <span className="text-[#B58E3E]">ABOUT</span> & HISTORY
             </div>
             <div>With the best luxury spa, salon and wedding experiences</div>

@@ -5,7 +5,7 @@ import Home from "./Home";
 import Rooms from "./Rooms";
 import Service from "./Service";
 import About from "./About";
-import Restaurant from "./Restaurant";
+// import Map from "./Map";
 import Contact from "./Contact";
 
 const Content = () => {
@@ -23,12 +23,13 @@ const Content = () => {
       <Element name="about" className="element">
         <About />
       </Element>
-      <Element name="restaurant" className="element">
+      {/* <Element name="restaurant" className="element">
         <Restaurant />
-      </Element>
+      </Element> */}
       <Element name="contact" className="element">
         <Contact />
       </Element>
+
     </div>
   );
 };
